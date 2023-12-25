@@ -21,7 +21,7 @@ def check_face(frame):
             face_match=False        
 while(True):
     ret , frame=cap.read()
-    if(ret):
+    if ret:
         if counter%30==0:
             try:
                 threading.Thread(target=check_face,args=(frame.copy(),)).start()
